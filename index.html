@@ -82,8 +82,7 @@
   </header>
 
   <main class="main">
-
-   <section id="hero" class="hero section dark-background">
+<section id="hero" class="hero section dark-background">
 
   <img src="assets/img/hero-bg.png" alt="Foire Ubuntu Bukavu" data-aos="fade-in">
 
@@ -91,21 +90,24 @@
     <h2 data-aos="fade-up" data-aos-delay="100">Foire Interuniversitaire UBUNTU</h2>
     <p data-aos="fade-up" data-aos-delay="200" class="mb-2">« Je suis parce que nous existons »</p>
     <p data-aos="fade-up" data-aos-delay="250" style="font-style: italic; font-size: 1.1rem;">Bâtir ensemble une jeunesse unie pour la paix et le développement à Bukavu.</p>
-    <br/><br/><br/>
-
-    <div class="audio-player-wrapper mt-4" data-aos="fade-up" data-aos-delay="400" style="position: relative;">
+    
+    <div class="highlight-audio-zone mt-5" data-aos="zoom-in" data-aos-delay="400">
       
       <div id="audio-hint" class="audio-hint">
-        <span class="hint-text"><strong>Écoutez l'hymne</strong></span>
+        <span class="hint-text">ÉCOUTEZ L'HYMNE UBUNTU</span>
         <i class="bi bi-arrow-down-short"></i>
       </div>
 
       <div class="audio-player-mini">
-        <div class="d-flex align-items-center gap-2 px-3 py-1" style="background: rgba(255,255,255,0.1); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px);">
-          <i id="audio-icon" class="bi bi-play-circle-fill text-white fs-4" style="cursor: pointer;" onclick="toggleAudio()"></i>
-          <span class="text-white small" style="font-size: 0.8rem; letter-spacing: 1px;">Hymne Ubuntu</span>
+        <div class="d-flex align-items-center gap-3 px-4 py-2 main-bar">
+          <i id="audio-icon" class="bi bi-play-circle-fill" onclick="toggleAudio()"></i>
+          <div class="text-start">
+            <span class="d-block text-white fw-bold" style="font-size: 0.9rem; letter-spacing: 1px;">Hymne Officiel</span>
+            <small class="text-white-50">Édition 2026</small>
+          </div>
           <audio id="ubuntuAudio" src="SonUbuntu.mp3"></audio>
-          <div class="audio-waves d-flex gap-1">
+          <div class="audio-waves d-flex gap-1 ms-2">
+            <span class="wave"></span>
             <span class="wave"></span>
             <span class="wave"></span>
             <span class="wave"></span>
@@ -118,51 +120,89 @@
 </section>
 
 <style>
-  /* Style de la flèche et du texte d'incitation */
+  /* Conteneur de mise en évidence (Glassmorphism) */
+  .highlight-audio-zone {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1); /* Fond blanc très léger */
+    padding: 60px 30px 20px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px); /* Flou d'arrière-plan */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Style de la flèche - Plus Grosse et plus Rouge */
   .audio-hint {
     position: absolute;
-    top: -45px;
+    top: -10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #f82249; /* Couleur d'accentuation */
-    font-weight: bold;
-    animation: arrow-bounce 1s infinite;
     z-index: 10;
+    animation: arrow-bounce 1s infinite;
   }
 
   .hint-text {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: rgba(248, 34, 73, 0.1);
-    padding: 2px 8px;
-    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: #f82249; /* Fond rouge vif pour attirer l'oeil */
+    padding: 4px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(248, 34, 73, 0.4);
+    white-space: nowrap;
   }
 
   .audio-hint i {
-    font-size: 1.5rem;
-    line-height: 1;
+    font-size: 2.5rem;
+    color: #f82249;
+    line-height: 0.8;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
 
-  /* Animation de rebond */
-  @keyframes arrow-bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(5px); }
+  /* La barre de lecture */
+  .main-bar {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  /* Styles existants conservés */
-  .audio-player-mini i:hover { color: #f82249 !important; transition: 0.3s; }
-  .audio-waves .wave { width: 2px; height: 10px; background: white; display: inline-block; animation: none; }
-  .playing .wave { animation: wave-anim 1s infinite ease-in-out; }
+  #audio-icon {
+    font-size: 2.5rem;
+    color: #f82249; /* Bouton Play en Rouge Ubuntu */
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #audio-icon:hover {
+    transform: scale(1.1);
+    color: #ff4d6d;
+  }
+
+  /* Animation des ondes musicales */
+  .audio-waves .wave { 
+    width: 3px; 
+    height: 12px; 
+    background: #f82249; 
+    border-radius: 10px;
+    display: inline-block; 
+  }
+
+  .playing .wave { animation: wave-anim 0.8s infinite ease-in-out; }
   .playing .wave:nth-child(2) { animation-delay: 0.2s; }
   .playing .wave:nth-child(3) { animation-delay: 0.4s; }
-  
+  .playing .wave:nth-child(4) { animation-delay: 0.1s; }
+
+  @keyframes arrow-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+  }
+
   @keyframes wave-anim {
-    0%, 100% { height: 5px; }
-    50% { height: 15px; }
+    0%, 100% { height: 5px; transform: scaleY(1); }
+    50% { height: 20px; transform: scaleY(1.5); background: white; }
   }
 </style>
 
@@ -170,20 +210,19 @@
   function toggleAudio() {
     var audio = document.getElementById("ubuntuAudio");
     var icon = document.getElementById("audio-icon");
-    var container = document.querySelector(".audio-player-mini");
+    var zone = document.querySelector(".highlight-audio-zone");
     var hint = document.getElementById("audio-hint");
 
     if (audio.paused) {
       audio.play();
       icon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill");
-      container.classList.add("playing");
-      
-      // Cache la flèche dès qu'on joue
-      if(hint) hint.style.display = "none"; 
+      zone.classList.add("playing");
+      if(hint) hint.style.opacity = "0"; // Disparition douce
     } else {
       audio.pause();
       icon.classList.replace("bi-pause-circle-fill", "bi-play-circle-fill");
-      container.classList.remove("playing");
+      zone.classList.remove("playing");
+      if(hint) hint.style.opacity = "1";
     }
   }
 </script>
