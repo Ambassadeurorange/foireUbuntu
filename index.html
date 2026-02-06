@@ -353,9 +353,7 @@
 
     <div class="row gy-4">
 
-      <div class="features-image col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-        <img src="assets/img/features-bg.jpg" alt="Foire Ubuntu Bukavu">
-      </div>
+      
 
       <div class="col-lg-6 order-lg-1">
 
@@ -662,14 +660,57 @@
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="Réunion de planification" class="img-fluid">
+                <img src="image.png" alt="Réunion de planification" class="img-fluid">
               </div>
 
               <p class="post-category">Organisation</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Compte-rendu : Le Comité Général définit la feuille de route 2026</a>
+                Compte-rendu : Le Comité Général définit la feuille de route 2026
               </h2>
+              <a href="#" id="comite-access-link" class="btn btn-sm btn-outline-danger mt-2">Espace Comité UBUNTU</a>
+
+              <!-- Modal HTML -->
+              <div class="modal fade" id="comiteModal" tabindex="-1" aria-labelledby="comiteModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="comiteModalLabel">Accès Comité UBUNTU</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Quitter"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>⚠️ Cet espace est réservé aux membres du comité UBUNTU.<br>Veuillez entrer le mot de passe :</p>
+                      <input type="password" id="comitePassword" class="form-control mb-2" placeholder="Mot de passe">
+                      <div id="comiteError" class="text-danger small mb-2" style="display:none;">Mot de passe incorrect.</div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quitter</button>
+                      <button type="button" class="btn btn-primary" id="comiteModalOk">Ok</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                document.getElementById('comite-access-link').addEventListener('click', function(e) {
+                  e.preventDefault();
+                  var modal = new bootstrap.Modal(document.getElementById('comiteModal'));
+                  document.getElementById('comitePassword').value = '';
+                  document.getElementById('comiteError').style.display = 'none';
+                  modal.show();
+                });
+
+                document.getElementById('comiteModalOk').addEventListener('click', function() {
+                  var pass = document.getElementById('comitePassword').value;
+                  var error = document.getElementById('comiteError');
+                  // Remplacez 'ubuntu2026' par votre mot de passe réel
+                  if(pass === 'ubuntu2026') {
+                    window.location.href = 'comite.html';
+                  } else {
+                    error.style.display = 'block';
+                  }
+                });
+              </script>
 
               <div class="d-flex align-items-center">
                 <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
@@ -686,13 +727,13 @@
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="Sensibilisation campus" class="img-fluid">
+                <img src="assets/img/logo.jpeg" alt="Sensibilisation campus" class="img-fluid">
               </div>
 
               <p class="post-category">Mobilisation</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Lancement de la tournée de sensibilisation dans les universités</a>
+                <a href="#">Lancement de la tournée de sensibilisation dans les universités</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -710,13 +751,13 @@
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-3.jpg" alt="Culture et Paix" class="img-fluid">
+                <img src="assets/img/logo.jpeg" alt="Culture et Paix" class="img-fluid">
               </div>
 
               <p class="post-category">Événement</p>
 
               <h2 class="title">
-                <a href="blog-details.html">UBUNTU 2026 : Le programme officiel de la semaine de la paix</a>
+                <a href="#">UBUNTU 2026 : Le programme officiel de la semaine de la paix</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -804,10 +845,12 @@
 <!-- /Contact Section -->
 
   </main>
-
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Foire UBUNTU</h3>
+      <div class="d-flex align-items-center justify-content-center mb-2">
+        <img src="assets/img/logo.jpeg" alt="Logo Foire Ubuntu" style="height:40px;width:40px;border-radius:50%;margin-right:10px;">
+        <h3 class="sitename mb-0">Foire UBUNTU</h3>
+      </div>
       <p>« Je suis parce que nous existons »<br>
          Bâtir ensemble une jeunesse unie pour la paix et le développement à Bukavu.</p>
       
