@@ -83,7 +83,7 @@
 
   <main class="main">
 
-    <section id="hero" class="hero section dark-background">
+   <section id="hero" class="hero section dark-background">
 
   <img src="assets/img/hero-bg.png" alt="Foire Ubuntu Bukavu" data-aos="fade-in">
 
@@ -96,21 +96,67 @@
       <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
     </div>
 
-    <div class="audio-player-mini mt-4" data-aos="fade-up" data-aos-delay="400">
-      <div class="d-flex align-items-center gap-2 px-3 py-1" style="background: rgba(255,255,255,0.1); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px);">
-        <i id="audio-icon" class="bi bi-play-circle-fill text-white fs-4" style="cursor: pointer;" onclick="toggleAudio()"></i>
-        <span class="text-white small" style="font-size: 0.8rem; letter-spacing: 1px;">Hymne Ubuntu</span>
-        <audio id="ubuntuAudio" src="assets/audio/SonUbuntu.mp3"></audio>
-        <div class="audio-waves d-flex gap-1">
-          <span class="wave"></span>
-          <span class="wave"></span>
-          <span class="wave"></span>
+    <div class="audio-player-wrapper mt-4" data-aos="fade-up" data-aos-delay="400" style="position: relative;">
+      
+      <div id="audio-hint" class="audio-hint">
+        <span class="hint-text">Écoutez l'hymne</span>
+        <i class="bi bi-arrow-down-short"></i>
+      </div>
+
+      <div class="audio-player-mini">
+        <div class="d-flex align-items-center gap-2 px-3 py-1" style="background: rgba(255,255,255,0.1); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px);">
+          <i id="audio-icon" class="bi bi-play-circle-fill text-white fs-4" style="cursor: pointer;" onclick="toggleAudio()"></i>
+          <span class="text-white small" style="font-size: 0.8rem; letter-spacing: 1px;">Hymne Ubuntu</span>
+          <audio id="ubuntuAudio" src="SonUbuntu.mp3"></audio>
+          <div class="audio-waves d-flex gap-1">
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-</section><style>
+</section>
+
+<style>
+  /* Style de la flèche et du texte d'incitation */
+  .audio-hint {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f82249; /* Couleur d'accentuation */
+    font-weight: bold;
+    animation: arrow-bounce 1s infinite;
+    z-index: 10;
+  }
+
+  .hint-text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(248, 34, 73, 0.1);
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+
+  .audio-hint i {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  /* Animation de rebond */
+  @keyframes arrow-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(5px); }
+  }
+
+  /* Styles existants conservés */
   .audio-player-mini i:hover { color: #f82249 !important; transition: 0.3s; }
   .audio-waves .wave { width: 2px; height: 10px; background: white; display: inline-block; animation: none; }
   .playing .wave { animation: wave-anim 1s infinite ease-in-out; }
@@ -128,11 +174,15 @@
     var audio = document.getElementById("ubuntuAudio");
     var icon = document.getElementById("audio-icon");
     var container = document.querySelector(".audio-player-mini");
+    var hint = document.getElementById("audio-hint");
 
     if (audio.paused) {
       audio.play();
       icon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill");
       container.classList.add("playing");
+      
+      // Cache la flèche dès qu'on joue
+      if(hint) hint.style.display = "none"; 
     } else {
       audio.pause();
       icon.classList.replace("bi-pause-circle-fill", "bi-play-circle-fill");
