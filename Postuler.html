@@ -97,7 +97,7 @@
                             <div class="carousel slide" id="artisticCarousel" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="assets/img/art1.jpg" class="d-block w-100" alt="Art visuel">
+                                        <img src="assets/img/projet1.png" class="d-block w-100" alt="Art visuel">
                                     </div>
                                     <div class="carousel-item">
                                         <img src="assets/img/art2.jpg" class="d-block w-100" alt="Musique">
@@ -126,10 +126,10 @@
                             <div class="carousel slide" id="innovantCarousel" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="assets/img/projet1.jpg" class="d-block w-100" alt="Projet innovant 1">
+                                        <img src="assets/img/projet1.png" class="d-block w-100" alt="Projet innovant 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/img/projet2.jpg" class="d-block w-100" alt="Projet innovant 2">
+                                        <img src="assets/img/projet2.png" class="d-block w-100" alt="Projet innovant 2">
                                     </div>
                                     <div class="carousel-item">
                                         <img src="assets/img/projet3.jpg" class="d-block w-100" alt="Projet innovant 3">
@@ -163,8 +163,8 @@
         }
         .trophy {
             position: absolute;
-            width: 60px;
-            height: 60px;
+            width: 300px;
+            height: 300px;
             opacity: 0.7;
             animation: trophy-move 12s linear infinite alternate;
         }
@@ -190,7 +190,7 @@
             const trophy = document.createElement('img');
             trophy.src = 'assets/img/trophy.png';
             trophy.className = 'trophy';
-            trophy.style.animationDelay = (i*3)+'s';
+            trophy.style.animationDelay = (i*10)+'s';
             trophyBg.appendChild(trophy);
         }
         </script>
