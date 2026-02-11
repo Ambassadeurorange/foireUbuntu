@@ -6,10 +6,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://foire-ubuntu.vercel.app/index.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+        <!-- duplicate of root '/' removed to avoid canonical/origin confusion -->
     <url>
         <loc>https://foire-ubuntu.vercel.app/blog.html</loc>
         <changefreq>weekly</changefreq>
