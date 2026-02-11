@@ -1,0 +1,261 @@
+╔════════════════════════════════════════════════════════════════╗
+║      ⚠️  PERSONNALISATION DES URLs - ÉTAPE CRITIQUE  ⚠️       ║
+╚════════════════════════════════════════════════════════════════╝
+
+AVANT DE FAIRE QUOI QUE CE SOIT, VOUS DEVEZ :
+─ Connaître votre URL de déploiement Vercel
+
+COMMENT TROUVER VOTRE URL ?
+═══════════════════════════════════════════════════════════════
+
+1. Allez sur : https://vercel.com
+
+2. Connectez-vous
+
+3. Trouvez votre projet : "foireUbuntu"
+
+4. Votre URL est affichée en haut :
+   
+   Exemple : https://foireubuntu.vercel.app
+   Ou : https://foire-ubuntu-abc123.vercel.app
+   Ou : https://votredomainepersonnalisé.com
+
+
+IMPORTANT : C'EST QUELLE URL ?
+─────────────────────────────
+□ URL Vercel par défaut : __________________________
+□ Domaine personnalisé (si vous en avez) : __________________________
+
+
+═══════════════════════════════════════════════════════════════
+FICHIERS AVEC "votre-domaine.com" À REMPLACER
+═══════════════════════════════════════════════════════════════
+
+FICHIER 1 : index.html
+─────────────────────
+Cherchez et remplacez :
+- "https://votre-domaine.com/" → "https://VOTRE_URL/"
+
+Lignes approximatives à chercher (Ctrl+F) :
+- Line 14: <link rel="canonical" href="https://votre-domaine.com/">
+- Line 21: <meta property="og:url" content="https://votre-domaine.com/">
+- Line 24: <meta property="og:image" content="https://votre-domaine.com/assets/img/...">
+- Line 28: <meta name="twitter:image" content="https://votre-domaine.com/assets/img/...">
+- Line 49: "url": "https://votre-domaine.com"
+- Line 70: "url": "https://votre-domaine.com"
+- Line 68: "url": "https://votre-domaine.com/assets/img/logo.jpeg"
+
+⚡ ASTUCE : Utilisez Ctrl+H (Find & Replace)
+1. Cherchez : https://votre-domaine.com
+2. Remplacez par : https://VOTRE_VRAI_URL
+3. Click "Replace All"
+
+
+FICHIER 2 : sitemap.xml
+──────────────────────
+Remplacez toutes les occurrences de :
+
+<loc>https://votre-domaine.com/
+
+Par :
+
+<loc>https://VOTRE_VRAI_URL/
+
+EXEMPLE COMPLET :
+
+DE :
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://votre-domaine.com/</loc>
+
+À :
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://foireubuntu.vercel.app/</loc>
+
+⚡ ASTUCE : 
+1. Ouvrez sitemap.xml
+2. Ctrl+H (Find & Replace)
+3. Cherchez : https://votre-domaine.com
+4. Remplacez par : https://VOTRE_VRAI_URL
+5. Click "Replace All"
+
+
+FICHIER 3 : robots.txt
+─────────────────────
+Remplacez :
+
+Sitemap: https://votre-domaine.com/sitemap.xml
+
+Par :
+
+Sitemap: https://VOTRE_VRAI_URL/sitemap.xml
+
+EXEMPLE :
+
+DE :
+Sitemap: https://votre-domaine.com/sitemap.xml
+
+À :
+Sitemap: https://foireubuntu.vercel.app/sitemap.xml
+
+⚡ ASTUCE : Ctrl+H sur robots.txt
+
+
+FICHIER 4 : vercel.json
+──────────────────────
+✓ Ce fichier n'a PAS besoin de modification
+(Il est génériquement configuré)
+
+
+═══════════════════════════════════════════════════════════════
+EXEMPLE CONCRET AVEC vercel.app
+═══════════════════════════════════════════════════════════════
+
+SI VOTRE URL VERCEL EST :
+https://foireubuntu.vercel.app
+
+ALORS REMPLACEZ :
+────────────────
+
+EN DANS index.html :
+- https://votre-domaine.com/ 
+  → https://foireubuntu.vercel.app/
+
+- https://votre-domaine.com/assets/img/hero-bg.png
+  → https://foireubuntu.vercel.app/assets/img/hero-bg.png
+
+EN DANS sitemap.xml :
+- <loc>https://votre-domaine.com/</loc>
+  → <loc>https://foireubuntu.vercel.app/</loc>
+
+- <loc>https://votre-domaine.com/blog.html</loc>
+  → <loc>https://foireubuntu.vercel.app/blog.html</loc>
+
+EN DANS robots.txt :
+- Sitemap: https://votre-domaine.com/sitemap.xml
+  → Sitemap: https://foireubuntu.vercel.app/sitemap.xml
+
+
+═══════════════════════════════════════════════════════════════
+ÉTAPES PRÉCISES À FAIRE
+═══════════════════════════════════════════════════════════════
+
+ÉTAPE 1 : Trouvez votre URL Vercel
+──────────────────────────────────
+Ma URL Vercel est : _______________________________________
+
+
+ÉTAPE 2 : Ouvrez VS Code
+────────────────────────
+□ Fichier → Ouvrir le dossier
+□ Sélectionnez le dossier : c:\Users\...\foireUbuntu
+
+
+ÉTAPE 3 : Optimisez index.html
+───────────────────────────────
+□ Ouvrez index.html
+
+□ Appuyez sur Ctrl+H (Find & Replace)
+
+□ TROUVER : https://votre-domaine.com
+
+□ REMPLACER PAR : https://[VOTRE URL]
+
+□ Cliquez "Replace All"
+
+□ Ctrl+S (Sauvegarder)
+
+
+ÉTAPE 4 : Optimisez sitemap.xml
+────────────────────────────────
+□ Ouvrez sitemap.xml
+
+□ Ctrl+H (Find & Replace)
+
+□ TROUVER : https://votre-domaine.com
+
+□ REMPLACER PAR : https://[VOTRE URL]
+
+□ Click "Replace All"
+
+□ Ctrl+S (Sauvegarder)
+
+
+ÉTAPE 5 : Optimisez robots.txt
+──────────────────────────────
+□ Ouvrez robots.txt
+
+□ Ctrl+H (Find & Replace)
+
+□ TROUVER : https://votre-domaine.com
+
+□ REMPLACER PAR : https://[VOTRE URL]
+
+□ Click "Replace All"
+
+□ Ctrl+S (Sauvegarder)
+
+
+ÉTAPE 6 : Git Push
+──────────────────
+□ Ouvrez le Terminal (Ctrl+`)
+
+□ Exécutez :
+  git add .
+  git commit -m "SEO: Personalize domain URLs"
+  git push
+
+□ Attendez 2-3 minutes le déploiement sur Vercel
+
+
+ÉTAPE 7 : Vérifiez
+──────────────────
+□ Attendez le déploiement (vous recevrez un email Vercel)
+
+□ Testez dans votre navigateur :
+
+  https://[VOTRE URL]/sitemap.xml
+  → Vous devriez voir le contenu XML
+
+  https://[VOTRE URL]/robots.txt
+  → Vous devriez voir le contenu texte
+
+□ Si vous voyez "404 Not Found" : attendez, c'est normal
+
+
+════════════════════════════════════════════════════════════════
+⚠️  ATTENTION - NE PAS OUBLIER
+════════════════════════════════════════════════════════════════
+
+❌ Ne remplacez PAS :
+   - "votre-domaine.com" par un faux URL
+   - Gardez les bonnes slashes / et les protocoles https://
+
+✅ À FAIRE :
+   - Remplacez exactement par votre URL Vercel
+   - Testez les fichiers dans le navigateur après
+   - Vérifiez que les URLs sont correctes
+
+
+════════════════════════════════════════════════════════════════
+SI VOUS AVEZ UN DOMAINE PERSONNALISÉ
+════════════════════════════════════════════════════════════════
+
+Si vous avez acheté un domaine (exemple : foire-ubuntu.cd) :
+
+1. Configurez-le dans Vercel
+   (Domaines Vercel → Ajouter → foire-ubuntu.cd)
+
+2. Remplacez simplement :
+   https://votre-domaine.com → https://foire-ubuntu.cd
+
+3. Ensuite, procédez normalement
+
+Pour plus d'info :
+https://vercel.com/docs/concepts/projects/domains/add-a-domain
+
+
+════════════════════════════════════════════════════════════════
+                   ✅ VOUS Y ÊTES PRESQUE !
+════════════════════════════════════════════════════════════════

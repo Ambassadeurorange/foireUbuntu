@@ -1,0 +1,20 @@
+# Robots.txt pour Foire UBUNTU
+# Autoriser tous les moteurs de recherche
+
+User-agent: *
+Allow: /
+Disallow: /forms/
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://foire-ubuntu.vercel.app/sitemap.xml
+
+# Crawl delay (optionnel, laisse du temps entre les requêtes)
+Crawl-delay: 1

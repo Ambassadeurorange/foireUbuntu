@@ -1,0 +1,211 @@
+════════════════════════════════════════════════════════════════
+   OPTIMISATIONS SEO POUR LES AUTRES PAGES
+════════════════════════════════════════════════════════════════
+
+Voici ce que vous devez optimiser sur chaque page HTML :
+Remplacez "votre-domaine.com" par votre vrai domaine.
+
+════════════════════════════════════════════════════════════════
+1. blog.html
+════════════════════════════════════════════════════════════════
+
+À REMPLACER dans le <head> :
+
+DE :
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Blog - KnightOne Bootstrap Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+À :
+  <!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Blog Foire UBUNTU - Actualités et Articles</title>
+    <meta name="description" content="Découvrez les actualités et articles de la Foire UBUNTU. Suivez les préparatifs, les participants et les événements du festival interuniversitaire à Bukavu.">
+    <meta name="keywords" content="blog ubuntu, actualités, articles, foire ubuntu, événements bukavu">
+    <meta name="author" content="Foire UBUNTU">
+    <meta name="language" content="French">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://votre-domaine.com/blog.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-domaine.com/blog.html">
+    <meta property="og:title" content="Blog Foire UBUNTU">
+    <meta property="og:description" content="Actualités et articles sur la Foire UBUNTU 2025">
+    <meta property="og:image" content="https://votre-domaine.com/assets/img/blog/..." >
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog Foire UBUNTU">
+
+
+════════════════════════════════════════════════════════════════
+2. Postuler.html
+════════════════════════════════════════════════════════════════
+
+À REMPLACER dans le <head> :
+
+DE :
+  <title>FOIRE UBUNTU</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+À :
+  <title>Postuler à la Foire UBUNTU 2025 - Inscriptions</title>
+  <meta name="description" content="Postulez pour participer à la Foire UBUNTU 2025. Inscrivez-vous pour le village des universités, concours d'innovation ou festival culturel à Bukavu.">
+  <meta name="keywords" content="postuler foire ubuntu, inscription, candidature, concours innovation">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://votre-domaine.com/Postuler.html">
+
+
+════════════════════════════════════════════════════════════════
+3. candidats.html
+════════════════════════════════════════════════════════════════
+
+À REMPLACER dans le <head> :
+
+  <title>Candidats Foire UBUNTU 2025</title>
+  <meta name="description" content="Consultez la liste des candidats à la Foire UBUNTU. Découvrez les participants au festival interuniversitaire de Bukavu.">
+  <meta name="keywords" content="candidats, participants, foire ubuntu, inscriptions">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://votre-domaine.com/candidats.html">
+
+
+════════════════════════════════════════════════════════════════
+4. Candidature-expositions.html
+════════════════════════════════════════════════════════════════
+
+À REMPLACER dans le <head> :
+
+  <title>Candidature Expositions - Foire UBUNTU</title>
+  <meta name="description" content="Candidatez pour exposer à la Foire UBUNTU 2025. Présentez vos projets innovants au festival interuniversitaire de Bukavu.">
+  <meta name="keywords" content="exposition, candidature exposition, stand foire ubuntu">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://votre-domaine.com/Candidature-expositions.html">
+
+
+════════════════════════════════════════════════════════════════
+5. miss-ubuntu.html
+════════════════════════════════════════════════════════════════
+
+À REMPLACER dans le <head> :
+
+  <title>Élection Miss UBUNTU 2025 - Foire UBUNTU</title>
+  <meta name="description" content="Élection Miss UBUNTU 2025 à la Foire Interuniversitaire. Découvrez les candidates et participez à l'événement majeur du festival.">
+  <meta name="keywords" content="miss ubuntu, élection, concours beauté, foire ubuntu">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://votre-domaine.com/miss-ubuntu.html">
+
+
+════════════════════════════════════════════════════════════════
+6. Chant.html / Slam.html / dessin.html
+════════════════════════════════════════════════════════════════
+
+CHANT.HTML :
+  <title>Concours de Chant - Foire UBUNTU 2025</title>
+  <meta name="description" content="Participez au concours de chant de la Foire UBUNTU. Montrez votre talent au festival culturel de Bukavu.">
+  <meta name="keywords" content="chant, concours chant, foire ubuntu, festival culturel">
+
+SLAM.HTML :
+  <title>Concours de Slam - Foire UBUNTU 2025</title>
+  <meta name="description" content="Participez au concours de slam de la Foire UBUNTU. Montrez votre poétique au festival de Bukavu.">
+  <meta name="keywords" content="slam, poésie, concours slam, foire ubuntu">
+
+DESSIN.HTML :
+  <title>Concours de Dessin - Foire UBUNTU 2025</title>
+  <meta name="description" content="Participez au concours de dessin de la Foire UBUNTU. Exhibez votre créativité au festival artistique.">
+  <meta name="keywords" content="dessin, art, concours art, foire ubuntu">
+
+
+════════════════════════════════════════════════════════════════
+7. postuler-art.html
+════════════════════════════════════════════════════════════════
+
+À REMPLACER dans le <head> :
+
+  <title>Postuler pour les Arts - Foire UBUNTU</title>
+  <meta name="description" content="Postulez pour participer aux concours artistiques de la Foire UBUNTU 2025. Chant, slam, dessin et autres arts.">
+  <meta name="keywords" content="postuler arts, concours artistique, foire ubuntu">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://votre-domaine.com/postuler-art.html">
+
+
+════════════════════════════════════════════════════════════════
+8. stands.html
+════════════════════════════════════════════════════════════════
+
+À REMPLACER dans le <head> :
+
+  <title>Village des Universités - Foire UBUNTU</title>
+  <meta name="description" content="Visitez le village des universités à la Foire UBUNTU 2025. Découvrez les universités partenaires et leurs projets.">
+  <meta name="keywords" content="village universités, stands, foire ubuntu, bukavu">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://votre-domaine.com/stands.html">
+
+
+════════════════════════════════════════════════════════════════
+9. portfolio-details.html
+════════════════════════════════════════════════════════════════
+
+À REMPLACER dans le <head> :
+
+  <title>Détails Projet - Foire UBUNTU</title>
+  <meta name="description" content="Découvrez les détails des projets présentés à la Foire UBUNTU 2025.">
+  <meta name="keywords" content="projets, portfolio, foire ubuntu">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://votre-domaine.com/portfolio-details.html">
+
+
+════════════════════════════════════════════════════════════════
+10. service-details.html / starter-page.html
+════════════════════════════════════════════════════════════════
+
+SERVICE-DETAILS.HTML :
+  <title>Services - Foire UBUNTU</title>
+  <meta name="description" content="Découvrez les services et activités de la Foire UBUNTU 2025 à Bukavu.">
+
+STARTER-PAGE.HTML :
+  <title>Commencer - Foire UBUNTU</title>
+  <meta name="description" content="Bienvenue à la Foire UBUNTU. Démarrez votre aventure avec nous à Bukavu 2025.">
+
+
+════════════════════════════════════════════════════════════════
+TRAVAIL À FAIRE
+════════════════════════════════════════════════════════════════
+
+✓ D'ABORD : Personnalisez le fichier index.html (DÉJÀ FAIT)
+
+À FAIRE : Optimisez manuellement chacune des autres pages avec :
+
+1. Changez lang="en" → lang="fr"
+2. Mettez à jour la balise <title>
+3. Remplissez <meta name="description">
+4. Remplissez <meta name="keywords">
+5. Ajoutez la balise <link rel="canonical"> 
+6. Remplacez "votre-domaine.com" par votre vrai URL
+
+C'EST OPTIONNEL mais recommandé :
+- Ajouter Open Graph tags
+- Ajouter Twitter Card tags
+- Ajouter JSON-LD schema si applicable
+
+
+════════════════════════════════════════════════════════════════
+SI VOUS VOULEZ AUTOMATISER
+════════════════════════════════════════════════════════════════
+
+Vous pouvez me demander d'optimiser rapidement toutes les pages.
+Je peux les faire en une seule opération.
+
+Dites simplement : "Optimise toutes les pages HTML"
+Ou : "Améliore blog.html, Postuler.html, candidats.html"
+
+════════════════════════════════════════════════════════════════
